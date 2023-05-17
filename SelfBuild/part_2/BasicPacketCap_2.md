@@ -2,9 +2,10 @@
 
 ### What we will cover ###
 
+-> OOP
 -> Importing the the Listener_
--> Using 'flags'
--> Decryption Attempt..
+-> Using some basic 'filters'
+-> Decoding packet data
 
 
 ## Main ##

@@ -1,6 +1,7 @@
 # LOCAL
 from File_man import File_Man
 from de_confuse import DeFuse_
+from the_shark import DaShark_
 
 # SYS_BASE
 import subprocess
@@ -21,9 +22,10 @@ class Listen_():
         super(Listen_, self).__init__(**kw)
         self.FM                 = File_Man()
         self.DF                 = DeFuse_()
+        self.DS                 = DaShark_()
 
                     # v Add the Target_IP param
-    def main(self, target_ip, ip_type):
+    def main(self, target_ip, ip_type, key_):
         try:
             print("[Targeting]: ", str(target_ip))
             conn = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(3))
@@ -49,58 +51,58 @@ class Listen_():
                     if ip_type == "4":
                         if str(target_ip) in str(src):
                             print(f"[FOUND]:[IPv4-Target]:[{src}]")
-                            print(f"\n***********************\n[DEST_MAC]:[{str(dest_mac)}]\n[SRC_MAC]:[{str(src_mac)}]\n[ETH_]:[{str(eth_proto)}]\n")
                         else:
                             continue
                     print(f"\t - [IPv4]:\n    [VERSION]:[{version}]\n    [HEADER_LEN]:[{header_length}]\n    [TTL]:[{ttl}]\n    [PROTO]:[{proto}]\n    [SRC]:[{src}]\n    [TARGET]:[{target}]")
-                    print("\n\n\t-- [DATA-HASHI]:: \n")
-                    self.DF.from_x_hex(data)
+                    #print("\n\n\t-- [DATA-HASHI]:: \n")
+                    #self.DF.from_x_hex(data)
+                    self.DS.take_this(target_ip, data, key_)
 
                     # ! ICMP
                     if proto == 1:
                         print("\t - [ICMP]:")
                         icmp_type, code, checksum, data = self.icmp_packet(data)
-                        print(f"\t\t[ICMP_TYPE]:[{icmp_type}]")
-                        print(f"\t\t[CODE]:[{code}]")
-                        print(f"\t\t[CHECK_SUM]:[{checksum}]")
-                       # print(f"\t\t\t[{target}]:[DATA]:[{str(data)}]")
-                        print("\n\n\t-- [DATA-HASHI]:: \n")
-                        self.DF.from_x_hex(data)
+                        print(f"\t[ICMP_TYPE]:[{icmp_type}]")
+                        print(f"\t[CODE]:[{code}]")
+                        print(f"\t[CHECK_SUM]:[{checksum}]")
+                        #print(f"\t\t[{target}]:[DATA]:[{str(data)}]")
+                        #print("\n\n\t-- [DATA-HASHI]:: \n")
+                        #self.DF.from_x_hex(data)
 
 
 
                     # ! TCP
                     if proto == 6:
-                        print("[TCP]:")
+                        print("\t - [TCP]:")
                         src_port, dest_port, seq, ack, flag_urg, flag_ack, flag_psh, flag_rst, flag_syn, flag_fin, data = self.tcp_segment(data)
                         print(f"\t[SRC_PORT]:[{src_port}] :: [DEST_PORT]:[{dest_port}]")
                         print(f"\t[SEQUENCE]:[{seq}] :: [ACK_]:[{ack}]")
                         print(f"\t[FLAGS]:")
                         print(f"\t\t[URG]:[{flag_urg}]\n\t\t[ACK]:[{flag_ack}]\n\t\t[PSH]:[{flag_psh}]\n\t\t[RST]:[{flag_rst}]\n\t\t[SYN]:[{flag_syn}]\n\t\t[FIN]:[{flag_fin}]")
                         #print(f"\t\t\t[{target}]:[DATA]:[{str(data)}]")
-                        print("\n\n\t-- [DATA-HASHI]:: \n")
-                        self.DF.from_x_hex(data)
+                        #print("\n\n\t-- [DATA-HASHI]:: \n")
+                        #self.DF.from_x_hex(data)
                     
                     # ! UDP
                     if proto == 17:
-                        print("[UDP]:")
+                        print("\t - [UDP]:")
                         src_port, dest_port, length, data = self.udp_segment(data)
                         print(f"\t[SRC_PORT]:[{src_port}]\n\t[DEST_PORT]:[{dest_port}]\n\t[LEN][{length}]")
                         #print(f"\t\t[{target}]:[DATA]:[{data}]")
-                        print("\n\n\t-- [DATA-HASHI]:: \n")
-                        self.DF.from_x_hex(data)
+                        #print("\n\n\t-- [DATA-HASHI]:: \n")
+                        #self.DF.from_x_hex(data)
 
                     # ! OTHER
                     else:
                         data_ = self.format_multi_line("\t\t", data)
                         #print(f"[{target}]:[OTHER]:[DATA]:[{data_}]")
 
+
                 # ! OTHER - OTHER
                 else:
                     data_ = self.format_multi_line("\t\t", data)
-                    #print(f"[{target}]:[DATA]:[{data_}]")
-                    self.DF.from_x_hex(data)
-                print("\n-----------------------\n")
+                    #print(f"[Uhmm]:[DATA]:[{data_}]")
+                    #self.DF.from_x_hex(data)
 
 
 

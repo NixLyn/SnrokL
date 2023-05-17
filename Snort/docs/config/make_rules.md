@@ -172,7 +172,10 @@ You can also Ping websites.. however, do not use "http(s)://" or "www."
 
 ### End-Of-Doc ###
 
-Next: More Packet types... "types_docs.md"
+Coming Soon:
+-> Displaying output to local webhost (Flask/Django)
+-> Changing Filters from local webhost 
+-> Creating profile of 'Target IP'
 
 
 

@@ -26,3 +26,23 @@ Snort/docs/..
 ... for getting started with snort...
 
 
+
+### Order of Reading ###
+
+Install:
+- install/install_snort.md
+- install/install_shh.md
+
+Config:
+- config/snort_config.md
+- config/make_rules.md
+- config/type_docs.md
+
+To view ScreenShots, '/SnortScreenShots/'
+
+
+
+### References ###
+
+Please read '/Refs' for more tutorials
+

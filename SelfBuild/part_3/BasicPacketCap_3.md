@@ -2,10 +2,8 @@
 
 ### What we will cover ###
 
--> MAC addr.. 👻
--> import subprocess -> nmap
+-> ssl/tls
 -> Using 'flags'.. more
--> Decryption Attempt.. again
 
 
 ## Main ##
