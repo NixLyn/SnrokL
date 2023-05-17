@@ -1,6 +1,29 @@
 
 # More Rules #
 
+
+## ICMP ##
+
+In /local.rules:
+
+```
+
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+
+
+# Any WebReturn..
+alert icmp any any -> $HOME_NET any (msg: "[ANY]:[ICMP]: "; sid: 10000014; rev: 1;)
+
+
+
+```
+
+
 ## SSH ##
 
 
@@ -84,6 +107,11 @@ And after opening a webpage, you should get something like this:
 04/29-14:24:50.878577  [**] [1:100000003:0] [HTTP_REQUEST]:  [**] [Priority: 0] {TCP} 192.168.0.107:43702 -> 52.85.217.203:80
 
 ```
+
+
+
+
+
 
 
 ### End-Of-Doc ###
