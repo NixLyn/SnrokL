@@ -1,5 +1,19 @@
 # SnrokL #
 
+```
+
+       (\____/)
+       / @__@ \
+      (  (oo)  )
+       `-.~~.-'
+       /     \
+     @/       \_
+     (/ /    \ \)
+      WW`----'WW
+
+```
+
+
 ## Purpose ##
 
 This is a Basic Fundamental of how to take 
