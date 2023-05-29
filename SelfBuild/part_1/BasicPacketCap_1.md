@@ -1,17 +1,25 @@
-# Bare Basic of Packet Capture #
+# Part 1 #
+
+```diff
+It's dangerous to go alone...
+...Take this with you:
+
+```
+
+# Bare Basic Packet Capture #
+
+## Python Sockets ##
+
+
+
 
 ## Includes ##
 
--> File_Man:
--->> Self-Built Functins for handling filedata
--->> -> (Though pandas would probably work best..)
-
--> de_confuse:
--->> My sarcastic way of 'decoding' a packet
--->> after it has been restructured...
-
 -> listener_0.py
 -->> For this part, that is the ```main```
+
+
+
 
 ### What we will cover ###
 
@@ -55,8 +63,8 @@ From here it will start pumping output...
 
 ## Purpose of Exercise ##
 
-A) To understand how to 'Sniff' a packet
-B) How packets are structured
+A) To understand how to recvFrom a socket port.
+B) How packets are structured.
 C) Learning the pain of decoding a packet..
 
 

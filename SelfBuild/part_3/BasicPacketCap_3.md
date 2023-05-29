@@ -1,73 +1,25 @@
 # Bare Basic of Packet Capture #
 
-### What we will cover ###
+### What We Will Cover ###
 
--> ssl/tls
--> Using 'flags'.. more
+-> Creating profiles
+-> Saving Packets
 
 
 ## Main ##
 
-### SSL/Cert ###
+### Creating profiles ###
 
-By running nmap, we can see if a target is using port : 443...
+For this particular part I have created my own
+'File_Man' for handling the reading and writing 
+of data on files
 
-this port is for ssl and tls... (Google that..)
+So first we will create a directory for profiles,
+then for each profile we will create a directory 
+inside the profiles directory
 
-So, if in fact they are using port:443..
-then let's use sslscan, "brought to you by, Kali Linux"..
+### Saving Packets ###
 
-```
-$ sslscan --show-certificate www.google.com:443
-
-```
-
-Some basic info here is :
-
-```
-  SSL/TLS Protocols:
-SSLv2     disabled
-SSLv3     disabled
-TLSv1.0   enabled
-TLSv1.1   enabled
-TLSv1.2   enabled
-TLSv1.3   enabled
-
-
-```
-
-^ This is at least a step in the right direction,
-be we are still far from getting there..
-
-
-
-
-
-
-
-### The Wheel... ###
-
-Since decrypting is a huge task, let's see who has already 
-done it on our behaves..
-
-well, none other than the masters..:
-
-```
-import pyshark
-
-```
-
-
-Don't worry, we still have our work cut out for us..
-
-first, we need to filter the ```sslscan``` output,
-(which is quite large), then we need to apply this to 
-captured packets... 
-
-
-But Wait! We need to first actually capture those packets..
-
-Thus far, we have only been viewing them, and looking at the 
-pretty streams of out put... (Not much use...)
-
-
+For each packet, there will be a src or dest addr
+so if the src addr is our own, we can denote that 
+the packet is going outbound, and vice versa

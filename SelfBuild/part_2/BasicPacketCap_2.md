@@ -88,7 +88,7 @@ We Will Use threading, to seperate the processes..
 Now in the while loop, we will add on simple condition first..:
 -> First, let's focus on IPv4.. (To keep it simple, for now)
 
-```
+```diff
 
         # ! IPv4_PACKET_SIZE -> 8
         if eth_proto == 8:
@@ -105,7 +105,7 @@ Now in the while loop, we will add on simple condition first..:
 By doing so, the tool will now only print either:
 
 -Somthing like:
-```
+```diff
 ***********************
 [DEST_MAC]:[A4:B6:1E:FC:91:9C]
 [SRC_MAC]:[84:4B:F5:01:42:93]
@@ -117,7 +117,7 @@ By doing so, the tool will now only print either:
 ```
 or 
 
-```
+```diff
 
 ***********************
 [DEST_MAC]:[84:4B:F5:01:42:93]
@@ -150,7 +150,7 @@ or
 
 What you might see on the output, be something like:
 
-```
+```diff
 
 
 └─$ sudo python3 main.py
