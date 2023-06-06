@@ -1,0 +1,150 @@
+[CP-#]:[78]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00Y\xe0\x0e\x17\x00\x012\x04~d\x00\x00\x00\x00\x1e\xcc\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[77]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00Y\xe0\x0e\x17\x00\x012\x04~d\x00\x00\x00\x00\x1e\xcc\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[83]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\xb2\xd9\x0e\x17\x00\x023\x04~d\x00\x00\x00\x00\xc4\xd1\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[84]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\xb2\xd9\x0e\x17\x00\x023\x04~d\x00\x00\x00\x00\xc4\xd1\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[91]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\x9f\xd4\x0e\x17\x00\x034\x04~d\x00\x00\x00\x00\xd6\xd5\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[90]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\x9f\xd4\x0e\x17\x00\x034\x04~d\x00\x00\x00\x00\xd6\xd5\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[101]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\xb6\xcc\x0e\x17\x00\x045\x04~d\x00\x00\x00\x00\xbe\xdc\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[102]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00\xb6\xcc\x0e\x17\x00\x045\x04~d\x00\x00\x00\x00\xbe\xdc\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[108]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00W\xc7\x0e\x17\x00\x056\x04~d\x00\x00\x00\x00\x1c\xe1\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+
+[CP-#]:[107]
+@[HEADER_DATA]::
+	%[IPv4]:                        
+	&[VERSION]:[4]                        
+	&[HEADER_LEN]:[20]                        
+	&[TTL]:[64]                        
+	&[PROTO]:[1]                        
+	&[SRC]:[10.0.0.106]                        
+	&[TARGET]:[8.8.8.8]
+[BASE_DATA]::                        
+	&[DEST]:[E4:26:86:B9:2B:BA]                        
+	&[SRC]:[84:4B:F5:01:42:93]                        
+	&[ETH_PROTO]:[8]                        
+		&[DATA_RAW]:[b'\x08\x00W\xc7\x0e\x17\x00\x056\x04~d\x00\x00\x00\x00\x1c\xe1\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567']
+

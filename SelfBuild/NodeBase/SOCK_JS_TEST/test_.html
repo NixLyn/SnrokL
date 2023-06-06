@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test_.css">
+    <title>NixLyn</title>
+</head>
+
+<body>
+    <section>
+        <div class="Test_conn">
+            <div class="header-lines">
+                <!-- HEADER -->
+                <h1>SEND & RECV</h1>
+                <h2>Socket Connection between </h2>
+                <h3>[JS:Client && PY:Server]</h3>
+            </div>
+            <div class="conn-switch">
+                <!-- CONN_SWITCH -->
+                <h4>CONN_SWITCH</h4>
+                <a style="background-color: chartreuse;" id="on_switch">ON</a>
+                <a style="background-color: red;" id="off_switch">OFF</a>
+            </div>
+            <div>
+                <!-- RedNodeConnection -->
+                <h3>Red_Node_Connection</h3>
+                <div id="node-connection">
+                    <h3>Status:</h3>
+                    <input type="text" name="connection-status" value="NO-CONNECTION" />
+                </div>
+                <!-- Display Data -->
+                <div style="background-color: rgb(39, 39, 39); color: aliceblue;">
+                    <h5>Latest cmd-sent:</h5>
+                    <input type="text" style="color: aliceblue;" name="current-cmd" value="">
+                </div>
+                <!-- RedNode Send cmds -->
+                <div style="background-color: rgb(0, 0, 255);">
+                    <h5>Latest Returned Data: </h5>
+                    <input type="text" name="data-returned" value="">
+                    <h5>Back_Log:</h5>
+                    <div id="back-log" style="height: 20vh; display: flex; flex-direction: column; overflow: scroll;">
+
+                    </div>
+                </div>
+            </div>
+            <div class="send-cmds" style="background-color: rgb(0, 255, 0);">
+                <!-- TRANSMIT_TO -->
+                <h3>SEND_CMDS</h3>
+                <input type="text" name="cmd-to-send" value="Send: 'Hello World!'" />
+                <input type="button" name="send-button" value="Send Cmd" />
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    /* Using: file:///home/dillon/CURRENT/RedNode/SOCK_JS_TEST/test_.html */
+    /*
+    ToDo:
+        -Create Connection Switch (On/Off)
+        -Link Switch
+        -Display Status
+        -Send Msgs
+            -Input:'post'
+        -Recv Msgs
+            -Display:'get'
+    */
+
+    /* Now we need an eventListener,
+        -Which behaves like a while loop (for you py_devs)
+     */
+    document.addEventListener('DOMContentLoaded', function () {
+        /* Let's make some variables linked to the html
+            so that we can see what we're doing
+            I don't like going in blindly.
+            - 'connection-status'
+            - 'current-cmd'
+            - 'data-returned'
+            - 'cmd-to-send'
+            - 'send-button'
+         */
+        /* We put them inside the 'eventListener' so that they get updated correctly */
+        const conn_status = document.querySelector('[name=connection-status]');
+        const current_cmd = document.querySelector('[name=current-cmd]');
+        const data_return = document.querySelector('[name=data-returned]');
+        const cmd_to_send = document.querySelector('[name=cmd-to-send]');
+        const send_button = document.querySelector('[name=send-button]');
+        const back_logmsg = document.querySelector('#back-log');
+
+        console.log('[EventListener]:[Running]');
+        /* Establish Connection */
+        const websocketClient = new WebSocket("ws://localhost:12345");
+        /* Once the connection has be 'opened' */
+        websocketClient.onopen = function () {
+            /* Send an init msg... good ol' "Hello World!" */
+            websocketClient.send('[CONN_REQ]');
+
+            /* We can log the new status */
+            console.log('[CONNECTION ESTABLISHED]');
+
+            /* and we can also display the STATUS on the screen */
+            conn_status.value = "CONNECTED!";
+            /* even change the color of the background.. 
+                - Already getting side tracked*/
+            conn_status.style.backgroundColor = 'rgb(0, 255, 0)';
+            /* And.. for the whole point of it:  */
+
+            /* Using the 'send-button' as a trigger: we can send the value of 'current-cmd' */
+            send_button.onclick = function () {
+                console.log('[Sending..]');
+                websocketClient.send(cmd_to_send.value);
+                current_cmd.value = cmd_to_send;
+                /* We can now send Messages to the PySocketServer */
+            };
+
+
+
+
+
+            /* Now we must await the return.. 
+            and display on the user-screen */
+            //data_return.nodeValue = 
+
+
+
+
+
+
+        };
+
+        /* But we will require Data-Returned 
+            - This function can actually be put outside
+                the 'onopen' function, incase of connection
+                problems. But, for safety, let's keep it in here
+        */
+        websocketClient.onmessage = function (msg) {
+            /* Print on console */
+            console.log('[RETURNED]:', msg);
+            /* and Display to the screen for the user */
+            data_return.value = msg.data;
+            /* We can also 'back-log' the messages:
+                Creating a new element inside the 'back-log'
+                container and appendingChild with the msg data
+             */
+            const new_log = document.createElement('div');
+            new_log.innerHTML = msg.data;
+            back_logmsg.appendChild(new_log);
+        };
+
+
+
+        websocketClient.send('[DIS_CONN]');
+    }, false);
+
+</script>
+
+</html>

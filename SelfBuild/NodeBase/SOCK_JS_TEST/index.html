@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terminal</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="terminal">
+            <nav>
+                <ul>
+                    <li id="about">/about</li>
+                    <li id="contact">/contact</li>
+                </ul>
+            </nav>
+            <div class="header-lines">
+                <!-- HEADER -->
+                <p>SEND & RECEIVE</p>
+                <p>Socket Connection between </p>
+                <p>[JS:Client && PY:Server]</p>
+            </div>
+            <div class="conn-switch">
+                <!-- CONN_SWITCH -->
+                <h4>CONN_SWITCH</h4>
+                <a id="on_switch">ON</a>
+                <a id="off_switch">OFF</a>
+            </div>
+
+            <p>RED-NODE<span class="cursor">_</span></p>
+            <p>Red_Node_Connection</p>
+            <div id="node-connection">
+                <p>Status:</p>
+                <input type="text" name="connection-status" placeholder="NO-CONNECTION" />
+            </div>
+            <!-- Display Data -->
+            <div>
+                <p>Latest cmd-sent:</p>
+                <input type="text" name="current-cmd" value="">
+            </div>
+            <!-- RedNode Send cmds -->
+            <div>
+                <p>Latest Returned Data: </p>
+                <input type="text" name="data-returned" value="">
+                <p>Back_Log:</p>
+                <div id="back-log">
+
+                </div>
+            </div>
+
+            <div class="send-cmds">
+                <!-- TRANSMIT_TO -->
+                <p>SEND_CMDS</p>
+                <input type="text" name="cmd-to-send" placeholder="Send: 'Hello World!'" />
+                <button type="submit" class="btn">SEND_CMDS</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="hidden">
+            <div id="about-content">
+                <p>~%<span class="cursor">_</span></p>
+                <p>NixLyn Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero sunt eaque
+                    blanditiis
+                    error ad vel aliquam, quae excepturi omnis.</p>
+            </div>
+            <div id="contact-content">
+                <p>~%<span class="cursor">_</span></p>
+                <p>NixLyn Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero sunt eaque
+                    blanditiis
+                    error ad vel aliquam, quae excepturi omnis.</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="./winbox.bundle.js"></script>
+</body>
+
+</html>
